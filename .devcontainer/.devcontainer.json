@@ -1,0 +1,19 @@
+// .devcontainer/devcontainer.json
+{
+  "name": "Jupyter Codespace",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10", 
+  // Käytetään valmista Python-kehityskuvaa (sisältää usein jo pip, conda ym.)
+  
+  "features": {
+    // Esim. jos haluat lisätä Node.js:n ominaisuuksia
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "16"
+    }
+  },
+  
+  // Asetukset, jotka ajetaan kun kontti käynnistyy
+  "postCreateCommand": "pip install jupyterlab && pip install -r requirements.txt",
+  
+  // Portit, jotka haluat avata, jos haluat varmistaa JupyterLab-portin
+  "forwardPorts": [8888]
+}
