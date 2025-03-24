@@ -1,3 +1,0 @@
-python==3.12
-jupyterlab==4.3.4
-notebook==7.3.2
